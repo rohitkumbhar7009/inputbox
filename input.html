@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Form</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+
+    .form-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 4px 6px rgba(232, 62, 62, 0.1);
+    }
+
+    .form-container h2 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #004285;
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .form-group {
+      flex: 1 1 calc(33.333% - 20px);
+      min-width: 250px;
+      position: relative;
+     
+    }
+  
+
+    label {
+      position: absolute;
+      top: -10px;
+      left: 12px;
+      background: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      color: #434343;
+      padding: 0 5px;
+    }
+
+  
+
+    input,
+    select {
+      width: 100%;
+      padding: 12px 15px;
+      text-decoration: none;
+      font-size: 14px;
+      color: #495057;
+      border: none;
+      border: 3px solid #4e94df;
+      border-radius: 9px;
+      background-color: #f1f3f5;
+      transition: all 0.3s ease;
+    }
+
+    input:focus,
+    select:focus {
+      background-color: #ffffff;
+      border-color: #0056b3;
+      outline: none;
+    }
+
+    label::after {
+      content: " *";
+      color: red;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 9px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .form-group {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Input Form</h2>
+    <form>
+      <div class="form-row">
+        <!-- First Name -->
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" placeholder="Enter First Name" required />
+        </div>
+
+        <!-- Last Name -->
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" placeholder="Enter Last Name" required />
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </div>
+
+      <br>
+      <div class="form-row">
+        <!-- Date of Birth -->
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" placeholder="DD-MM-YYYY" required />
+        </div>
+
+        <!-- Roll Number -->
+        <div class="form-group">
+          <label for="roll">Roll</label>
+          <input type="text" id="roll" placeholder="Enter Roll Number" required />
+        </div>
+
+        <!-- Blood Group -->
+        <div class="form-group">
+          <label for="blood-group">Blood Group</label>
+          <select id="blood-group" required>
+            <option value="">Please Select Group</option>
+            <option value="A+">A+</option>
+            <option value="B+">B+</option>
+            <option value="O+">O+</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
